@@ -5,14 +5,8 @@ input.onButtonPressed(Button.A, function () {
     } else {
         index += 1
     }
-    plotTal(index)
 })
-function plotTal (tal: number) {
-    clear()
-    // Plot den aktuelle værdi vha. modulos og division
-    led.plot(tal % 5, Math.floor(tal / 5))
-}
-function clear () {
+input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -20,13 +14,8 @@ function clear () {
         . . . . .
         . . . . .
         `)
-}
-input.onButtonPressed(Button.B, function () {
-    clear()
     // Vis navnet på skærmen ved at finde navnet på listen på pladsen som index har
     basic.showString("" + (navneliste[index]))
-    // Gå tilbage og vis tallet igen
-    plotTal(index)
 })
 let index = 0
 let navneliste: string[] = []
@@ -41,4 +30,3 @@ navneliste = [
 "Helge",
 "Ida"
 ]
-plotTal(index)
