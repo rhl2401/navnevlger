@@ -17,8 +17,9 @@ input.onButtonPressed(Button.B, function () {
     // Vis navnet på skærmen ved at finde navnet på listen på pladsen som index har
     basic.showString("" + (navneliste[index]))
 })
-let index = 0
 let navneliste: string[] = []
+let index = 0
+index = 0
 navneliste = [
 "Anna",
 "Bjarne",
